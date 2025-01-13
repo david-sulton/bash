@@ -16,7 +16,7 @@ fi
 
   for ip in $(seq 1 254); do
     ping -c 1 -w 1 $network.$ip > /dev/null 2>&1
-    if [$? -eq 0]; then 
+    if [ $? -eq 0 ]; then 
       echo "Host $network.$ip is up"
     fi
   done
